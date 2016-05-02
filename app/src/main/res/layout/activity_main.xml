@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cn.studyjams.s1.sj64.liuyang.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/colorAccent"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/currency_convert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@mipmap/ic_attach_money_black_48dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/currency_convert"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/colorAccent"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/memory_convert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@mipmap/ic_memory_black_48dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/memory_space_convert"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/colorAccent"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/number_systems_convert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:textColor="@android:color/black"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@mipmap/ic_code_black_48dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/number_systems_convert"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

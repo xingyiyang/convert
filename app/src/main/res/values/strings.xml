@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Convert</string>
+    <string name="action_settings">设置</string>
+    <string name="action_about">关于</string>
+
+    <string name="currency_convert">货币转换</string>
+    <string name="memory_space_convert">存储单位转换</string>
+    <string name="number_systems_convert">进制转换</string>
+
+    <string name="change">\u21C6</string>
+
+    <string name="hint_number_system_2">只能输入0, 1</string>
+
+    <string name="title_activity_about">Convert Version 1.0</string>
+    <string name="large_text">
+        "Convert Version 1.0\n\n"
+
+        "功能:\n\n"
+        "- 货币转换\n- 存储单位转换\n- 进制转换\n\n"
+
+        "项目中用到:\n\n"
+        "- Android 滚动选择控件[来自: wangjiegulu];\n"
+        "- 使用ApiStoreSDK(Android)中的汇率接口来根据实时汇率完成货币转换\n\n"
+
+        "项目地址:\n\nhttps://github.com/SJ64/AndroidDemo/tree/master/sealiu/Convert\n\n"
+
+        "Convert APP 是我在学习完Google组织的2016 Study Jams活动之后，做出来的结业项目。经过一个月"
+        "的学习，让我对Android开发有了一些初步的了解，也能够做出一个独立的app。这次的学习体验很棒，无论是分组"
+        "还是规定时间来完成课程，还是提交笔记解锁下一课程起到了督促学习的作用。Google提供的视频教程也非常棒，"
+        "我想如果我一点编程基础也没有，也可以顺利完成该活动的学习。但是正如你所看到的，这个APP还有很多不合适的"
+        "地方，甚至有些时候根本不管用了。但是我会在学习Android开发的同时一直维护这个项目。\n\n"
+
+        "谢谢SJ/64小组成员，特别要谢谢组长豪豪帮我们提交笔记解锁课程！\n\n"
+
+        "Copyright [2016] [sealiu]\n\n"
+
+        "Licensed under the Apache License, Version 2.0 (the "License");you may not use this file "
+        "except in compliance with the License.You may obtain a copy of the License at\n\n"
+
+        "http://www.apache.org/licenses/LICENSE-2.0\n\n"
+
+        "Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.\n\n"
+    </string>
+</resources>
