@@ -17,8 +17,12 @@
 
 ## 杂
 
-- [原型图](https://modao.cc/app/mYrwNuZWb6u7NoaDyPsdFnkZmgxQefB)
 - Android Studio 2.0
 - minSdkVersion 15
 - targetSdkVersion 23
 - sealiu - 2016/4
+
+## 预览
+
+![Preview-1](preview/preview-1.png)
+![Preview-2](preview/preview-2.png)
