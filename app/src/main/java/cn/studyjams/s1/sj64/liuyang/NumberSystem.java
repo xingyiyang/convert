@@ -6,12 +6,18 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.method.DigitsKeyListener;
+import android.text.method.NumberKeyListener;
 import android.text.style.BackgroundColorSpan;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 public class NumberSystem extends AppCompatActivity {
     private static final String[] TYPE = new String[]{
@@ -146,6 +152,8 @@ public class NumberSystem extends AppCompatActivity {
 
             }
         });
+
+        editTextLeft.setKeyListener(DigitsKeyListener.getInstance("0123456789abcdeABCDE"));
     }
 
     /**

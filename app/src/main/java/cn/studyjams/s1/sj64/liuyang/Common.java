@@ -49,6 +49,9 @@ public class Common {
                 etLeft.setText(rightValue);
                 etRight.setText(leftValue);
 
+                // set the cursor at furthest to the right.
+                etLeft.setSelection(etLeft.getText().length());
+
             }
         });
     }
