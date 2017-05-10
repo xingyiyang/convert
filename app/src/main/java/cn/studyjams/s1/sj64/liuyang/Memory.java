@@ -36,11 +36,9 @@ public class Memory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_convert_panel);
 
-        /**
-         * add back button in the left side of actionBar.
-         * this activity's parent is defined in AndroidManifest.xml.
-         */
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         final WheelView wvLeft = (WheelView) findViewById(R.id.wv_left);
         final WheelView wvRight = (WheelView) findViewById(R.id.wv_right);
@@ -62,18 +60,11 @@ public class Memory extends AppCompatActivity {
         detail += "\n1 B = 8 bit";
         detailTextView.setText(detail);
 
-        /**
-         * initiate WheelView and set OnWheelViewListener function. change the content of the
-         * TextView and WheelView when the WheelView scrolled;
-         */
         common.initWheelView(TYPE, currentTypeTextView, wvLeft);
         common.initWheelView(TYPE, convertTypTextView, wvRight);
 
-        /**
-         * when click the change button, swap the value of currentTypeTextView and convertTypTextView.
-         * And at the same time, swap the content of wvLeft and wvRight.
-         */
-        common.changePosition(changeBtn, editTextLeft, editTextRight, currentTypeTextView, convertTypTextView, wvLeft, wvRight, TYPE);
+        common.changePosition(changeBtn, editTextLeft, editTextRight, currentTypeTextView,
+                convertTypTextView, wvLeft, wvRight, TYPE);
 
         editTextLeft.addTextChangedListener(new TextWatcher() {
             int leftTypeIndex;

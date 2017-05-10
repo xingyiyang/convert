@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,11 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textViewCurrency = (TextView) findViewById(R.id.currency_convert);
-        TextView textViewMemory = (TextView) findViewById(R.id.memory_convert);
-        TextView textViewNumberSystem = (TextView) findViewById(R.id.number_systems_convert);
-
-        textViewCurrency.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.currency_convert).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Currency.class);
@@ -27,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        textViewMemory.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.memory_convert).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Memory.class);
@@ -35,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        textViewNumberSystem.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.number_systems_convert).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, NumberSystem.class);
