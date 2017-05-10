@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -49,15 +50,18 @@ public class Memory extends AppCompatActivity {
         final EditText editTextLeft = (EditText) findViewById(R.id.current_value_edit_text);
         final EditText editTextRight = (EditText) findViewById(R.id.convert_value_edit_text);
 
+        editTextLeft.setInputType(EditorInfo.TYPE_CLASS_NUMBER);
+        editTextRight.setInputType(EditorInfo.TYPE_CLASS_NUMBER);
+
         Button changeBtn = (Button) findViewById(R.id.change_btn);
 
         TextView detailTextView = (TextView) findViewById(R.id.detail);
-        String detail = "1 PB = 1024 TB";
-        detail += "\n1 TB = 1024 GB";
-        detail += "\n1 GB = 1024 MB";
-        detail += "\n1 GB = 1024 KB";
-        detail += "\n1 KB = 1024 B";
-        detail += "\n1 B = 8 bit";
+        String detail = "1 PB = 1024 TB" +
+                "\n1 TB = 1024 GB" +
+                "\n1 GB = 1024 MB" +
+                "\n1 MB = 1024 K" +
+                "\n1 KB = 1024 B" +
+                "\n1 B = 8 bit";
         detailTextView.setText(detail);
 
         common.initWheelView(TYPE, currentTypeTextView, wvLeft);

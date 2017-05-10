@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -66,6 +67,9 @@ public class Currency extends AppCompatActivity {
 
         final EditText editTextLeft = (EditText) findViewById(R.id.current_value_edit_text);
         final EditText editTextRight = (EditText) findViewById(R.id.convert_value_edit_text);
+
+        editTextLeft.setInputType(EditorInfo.TYPE_CLASS_NUMBER);
+        editTextRight.setInputType(EditorInfo.TYPE_CLASS_NUMBER);
 
         Button changeBtn = (Button) findViewById(R.id.change_btn);
 
