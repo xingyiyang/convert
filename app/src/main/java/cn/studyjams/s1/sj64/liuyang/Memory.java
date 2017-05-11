@@ -13,22 +13,7 @@ import java.text.DecimalFormat;
 
 public class Memory extends AppCompatActivity {
 
-    //yotta，[尧]它， Y. 10^21，
-    //zetta，[泽]它， Z. 10^18，
-    //exa，[艾]可萨， E. 10^15，
-    //peta，[拍]它， P. 10^12，
-    //tera，[太]拉， T. 10^9，
-    //giga，[吉]咖， G. 10^6，
-    //mega，[兆]，M. 10^3
-    private static final String[] TYPE = new String[]{
-            "bit",
-            "B",
-            "KB",
-            "MB",
-            "GB",
-            "TB",
-            "PB"
-    };
+    private static final String[] TYPE = new String[]{"bit", "B", "KB", "MB", "GB", "TB", "PB"};
 
     Common common = new Common();
 
@@ -36,20 +21,17 @@ public class Memory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_convert_panel);
-
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-
         final WheelView wvLeft = (WheelView) findViewById(R.id.wv_left);
         final WheelView wvRight = (WheelView) findViewById(R.id.wv_right);
-
         final TextView currentTypeTextView = (TextView) findViewById(R.id.current_type);
         final TextView convertTypTextView = (TextView) findViewById(R.id.convert_type);
-
         final EditText editTextLeft = (EditText) findViewById(R.id.current_value_edit_text);
         final EditText editTextRight = (EditText) findViewById(R.id.convert_value_edit_text);
 
+        // 设置键盘输入类型
         editTextLeft.setInputType(EditorInfo.TYPE_CLASS_NUMBER);
         editTextRight.setInputType(EditorInfo.TYPE_CLASS_NUMBER);
 
@@ -70,6 +52,7 @@ public class Memory extends AppCompatActivity {
         common.changePosition(changeBtn, editTextLeft, editTextRight, currentTypeTextView,
                 convertTypTextView, wvLeft, wvRight, TYPE);
 
+        // 单位转换
         editTextLeft.addTextChangedListener(new TextWatcher() {
             int leftTypeIndex;
             int rightTypeIndex;
@@ -79,6 +62,7 @@ public class Memory extends AppCompatActivity {
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // 获取左右两边的存储单位编号
                 leftTypeIndex = wvLeft.getSeletedIndex();
                 rightTypeIndex = wvRight.getSeletedIndex();
             }
@@ -90,16 +74,19 @@ public class Memory extends AppCompatActivity {
                 if (!String.valueOf(s).equals("")) {
                     leftValue = Double.parseDouble(s.toString());
 
+                    // 左右两边的单位一致
                     if (leftTypeIndex == rightTypeIndex) {
                         rightValue = leftValue;
                         editTextRight.setText(new DecimalFormat("0").format(rightValue));
                     }
 
+                    // 左边的单位为 bit，且右边不是 bit
                     if (leftTypeIndex == 0 && rightTypeIndex != 0) {
                         rightValue = leftValue / (8 * Math.pow(1024, distance - 1));
                         editTextRight.setText(new DecimalFormat("0.00").format(rightValue));
                     }
 
+                    // 左边的单位不是 bit，且右边也不是 bit
                     if (leftTypeIndex != 0 && rightTypeIndex != 0) {
                         if (leftTypeIndex > rightTypeIndex) {
                             rightValue = leftValue * Math.pow(1024, distance);
@@ -112,6 +99,7 @@ public class Memory extends AppCompatActivity {
                         }
                     }
 
+                    // 左边的单位不是 bit，但右边是 bit
                     if (leftTypeIndex != 0 && rightTypeIndex == 0) {
                         rightValue = leftValue * 8 * Math.pow(1024, distance - 1);
                         editTextRight.setText(new DecimalFormat("0").format(rightValue));
@@ -126,7 +114,6 @@ public class Memory extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
 
             }
-        }); //editTextLeft.addTextChangedListener
-
-    } //onCreate
+        });
+    }
 }

@@ -4,51 +4,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cn.studyjams.s1.sj64.liuyang.MainActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="@dimen/activity_vertical_margin">
-
         <Button
             android:id="@+id/currency_convert"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@mipmap/ic_attach_money_black_48dp"
             android:gravity="center"
             android:padding="8dp"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:text="@string/currency_convert"
             android:textColor="@android:color/white"
             android:textSize="16sp"/>
-
         <Button
             android:id="@+id/memory_convert"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@mipmap/ic_memory_black_48dp"
             android:gravity="center"
             android:padding="8dp"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:text="@string/memory_space_convert"
             android:textColor="@android:color/white"
             android:textSize="16sp" />
-
         <Button
             android:id="@+id/number_systems_convert"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:clickable="true"
             android:drawableStart="@mipmap/ic_code_black_48dp"
             android:gravity="center"
             android:padding="8dp"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:text="@string/number_systems_convert"
             android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"/>
-
+            android:textSize="16sp" />
     </LinearLayout>
 </ScrollView>
 
