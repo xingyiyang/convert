@@ -7,12 +7,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.firebase.analytics.FirebaseAnalytics;
 
+public class MainActivity extends AppCompatActivity {
+    private FirebaseAnalytics mFirebaseAnalytics;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Obtain the FirebaseAnalytics instance.
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         findViewById(R.id.currency_convert).setOnClickListener(new View.OnClickListener() {
             @Override

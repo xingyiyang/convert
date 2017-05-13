@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "712378164555",
+    "firebase_url": "https://convert-fc20d.firebaseio.com",
+    "project_id": "convert-fc20d",
+    "storage_bucket": "convert-fc20d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712378164555:android:3888d991328a8078",
+        "android_client_info": {
+          "package_name": "cn.studyjams.s1.sj64.liuyang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712378164555-r0nbqlgqiq6m8c0cs8jnh5d0if2cf619.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZSTO0UAcLEW_OHMNd59C-jw4NiV0kyMM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
