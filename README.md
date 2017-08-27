@@ -1,4 +1,4 @@
-# convert201708271611
+# convert
 具有转化功能的工具（货币，存储单位，进制......）
 
 ---
@@ -26,4 +26,3 @@
 
 ![Preview-1](preview/preview-1.png)
 ![Preview-2](preview/preview-2.png)
-#20170827
